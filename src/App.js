@@ -5,11 +5,17 @@ import CountryPicker from ' ./components/CountryPicker/CountryPicker';
 import { fetchData } from './api/index'
 
 class App extends React.Component {
-    state = {
-        data: {}.
+    // state = {
+    //     data: {}.
+    // }
+
+    constructor() {
+        this.state = {
+            data: {},
+        }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const fetchedData = await fetchData();
 
         // console.log(data);
