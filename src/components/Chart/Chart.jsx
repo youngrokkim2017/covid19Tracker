@@ -11,7 +11,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         }
 
         fetchAPI();
-    });
+    }, []);
 
     const lineChart = (
         dailyData.length
@@ -45,7 +45,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
                         datasets: [{
                             label: 'People',
                         }],
-                        data: [confirmed, recovered, deaths],
+                        data: [confirmed.value, recovered.value, deaths.value],
                     }}
                     options={{
                         legend: {
